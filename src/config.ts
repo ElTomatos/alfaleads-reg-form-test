@@ -1,7 +1,7 @@
 /**
  * Typings
  */
-import { IFormStep } from '@/@types/form';
+import { IFormInput } from '@/@types/form';
 
 /**
  * Helpers
@@ -24,7 +24,7 @@ export const DIMENSIONS: { width: number; height: number } = {
 /**
  * Registration form fields
  */
-export const FORM_FIELDS: IFormStep[][] = [
+export const FORM_FIELDS: IFormInput[][] = [
   [
     {
       selector: '#first-name',

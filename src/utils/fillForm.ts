@@ -1,7 +1,7 @@
 /**
- * Vendors
+ * Vendor
  */
-import { Page } from 'puppeteer';
+import async from 'async';
 
 /**
  * Config
@@ -9,16 +9,27 @@ import { Page } from 'puppeteer';
 import { FORM_FIELDS } from '@/config';
 
 /**
- * Fill form with values from config
- * @param {Page} page
+ * Utils
  */
-const fillForm = async (page: Page): Promise<void> => {
-  await page.waitForSelector('step1');
-  FORM_FIELDS[0].forEach(async ({ selector, value }) => {
-    await page.waitForSelector(selector);
-    await page.click(selector);
-    await page.type(selector, value);
-  });
+import fillInput from '@/utils/fillInput';
+
+/**
+ * Page
+ */
+import { page } from '@/index';
+
+/**
+ * Fill form with values from config
+ */
+const fillForm = async (): Promise<void> => {
+  console.log('waiting for step-1');
+  await page.waitForSelector('.step1');
+
+  console.log('filling inputs');
+  for await (const field of FORM_FIELDS[0]) {
+    await fillInput(field);
+  }
+  console.log('inputs filled');
 };
 
 /**
