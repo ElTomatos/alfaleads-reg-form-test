@@ -1,0 +1,25 @@
+{
+  "name": "alfaleads-reg-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "module-alias": "^2.2.2",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^2.0.0",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@": "src/"
+  }
+}
