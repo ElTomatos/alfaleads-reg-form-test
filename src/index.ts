@@ -27,6 +27,7 @@ const run = async (): Promise<void> => {
   page = await openPage(browser);
 
   await page.evaluate(() => (window.grecaptcha.getResponse = () => true));
+
   console.log('filling form');
   await fillForm();
   console.log('form filled');

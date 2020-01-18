@@ -18,17 +18,18 @@ export const TEST_URL: string = 'https://alfaleads.net/registration.html';
  */
 export const DIMENSIONS: { width: number; height: number } = {
   width: 1920,
-  height: 1080,
+  height: 1280,
 };
 
 /**
  * Registration form fields
  */
+const name: string = getRandomName();
 export const FORM_FIELDS: IFormInput[][] = [
   [
     {
       selector: '#first-name',
-      value: getRandomName(),
+      value: name,
     },
     {
       selector: '#last-name',
@@ -36,7 +37,7 @@ export const FORM_FIELDS: IFormInput[][] = [
     },
     {
       selector: '#mail',
-      value: `${getRandomName()}@test.com`,
+      value: `${name}@test.com`,
     },
     {
       selector: '#pass1',
@@ -51,4 +52,70 @@ export const FORM_FIELDS: IFormInput[][] = [
       value: 'test',
     },
   ],
+  [
+    {
+      selector: '#country',
+      value: 'test',
+    },
+    {
+      selector: '#city',
+      value: 'test',
+    },
+    {
+      selector: '[data-select2-id="1"]',
+      value: '.select2-results__option:first-child',
+      type: 'select',
+    },
+    {
+      selector: '#username',
+      value: 'test',
+    },
+    {
+      selector: '#experience',
+      value: 'test',
+    },
+  ],
+  [
+    {
+      selector: '[data-select2-id="5"]',
+      value: '.select2-results__option:first-child',
+      type: 'select',
+    },
+    {
+      selector: '#networks-selectized',
+      value: 'test',
+      type: 'selectized',
+      wrapper: '.networks--wrapper',
+    },
+    {
+      selector: '#traffic-selectized',
+      value: 'test',
+      type: 'selectized',
+      wrapper: '.traffic--wrapper',
+    },
+    {
+      selector: '[data-select2-id="7"]',
+      value:
+        '#select2-select-verticies-results .select2-results__option:first-child',
+      type: 'select',
+    },
+    {
+      selector: '[data-select2-id="8"]',
+      value:
+        '#select2-select-country-results .select2-results__option:first-child',
+      type: 'select',
+    },
+    {
+      selector: '[data-select2-id="9"]',
+      value:
+        '#select2-monthly-revenue-results .select2-results__option:first-child',
+      type: 'select',
+    },
+    {
+      selector: '#agree',
+      type: 'checkbox',
+    },
+  ],
 ];
+
+export const NEXT_BTN_SELECTOR: string = '.next__btn';

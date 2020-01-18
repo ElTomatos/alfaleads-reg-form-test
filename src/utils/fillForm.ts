@@ -11,7 +11,7 @@ import { FORM_FIELDS } from '@/config';
 /**
  * Utils
  */
-import fillInput from '@/utils/fillInput';
+import fillStep from '@/utils/fillStep';
 
 /**
  * Page
@@ -22,14 +22,9 @@ import { page } from '@/index';
  * Fill form with values from config
  */
 const fillForm = async (): Promise<void> => {
-  console.log('waiting for step-1');
-  await page.waitForSelector('.step1');
-
-  console.log('filling inputs');
-  for await (const field of FORM_FIELDS[0]) {
-    await fillInput(field);
+  for await (const step of FORM_FIELDS.keys()) {
+    await fillStep(step + 1);
   }
-  console.log('inputs filled');
 };
 
 /**

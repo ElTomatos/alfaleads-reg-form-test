@@ -14,7 +14,7 @@ import { DIMENSIONS } from '@/config';
  */
 const launchBrowser = async (): Promise<Browser> => {
   const browser: Browser = await puppeteer.launch({
-    slowMo: 80,
+    slowMo: 40,
     headless: false,
     args: [`--window-size=${DIMENSIONS.width},${DIMENSIONS.height}`],
   });

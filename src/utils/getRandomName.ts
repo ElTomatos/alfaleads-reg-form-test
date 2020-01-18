@@ -3,7 +3,7 @@
  * @return {string}
  */
 const getRandomName = (): string => {
-  const suffix: number = Math.floor(Math.random() * 10);
+  const suffix: number = Math.floor(Math.random() * 1000);
   return `test${suffix}`;
 };
 
