@@ -1,4 +1,4 @@
-import { page } from '@/index';
+import { page } from '@/index.spec';
 
 /**
  * Fill selectized input

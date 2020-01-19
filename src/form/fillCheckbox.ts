@@ -1,7 +1,7 @@
 /**
  * Page
  */
-import { page } from '@/index';
+import { page } from '@/index.spec';
 
 /**
  * Checking checkbox type input

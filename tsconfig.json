@@ -10,16 +10,10 @@
     "outDir": "dist",
     "baseUrl": "src",
     "paths": {
-      "@/*": [
-        "*"
-      ],
-      "*": [
-        "node_modules/*",
-        "types/*"
-      ]
+      "@/*": ["*"],
+      "*": ["node_modules/*", "types/*"]
     }
   },
-  "include": [
-    "**/*"
-  ]
+  "include": ["**/*", "node_modules/@types/jest"],
+  "types": ["typePatches", "jest"]
 }

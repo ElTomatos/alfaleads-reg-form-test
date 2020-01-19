@@ -14,7 +14,7 @@ import { IBrowser } from '@/@types/browser';
 const getBrowserConfig = (): IBrowser => {
   const config: IBrowser = {
     slowMo: 40,
-    headless: process.env.NODE_ENV === 'debug',
+    headless: process.env.NODE_ENV !== 'debug',
     args: [`--window-size=${DIMENSIONS.width},${DIMENSIONS.height}`],
   };
 

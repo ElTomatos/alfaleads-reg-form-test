@@ -120,9 +120,9 @@ export const FORM_FIELDS: IFormInput[][] = [
         '#select2-monthly-revenue-results .select2-results__option:first-child',
       type: INPUT_TYPE.SELECT,
     },
-    {
-      selector: '#agree',
-      type: INPUT_TYPE.CHECKBOX,
-    },
+    // {
+    //   selector: '#agree',
+    //   type: INPUT_TYPE.CHECKBOX,
+    // },
   ],
 ];

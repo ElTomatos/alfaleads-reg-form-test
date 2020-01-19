@@ -1,0 +1,1 @@
+{"version":3,"file":"getRandomName.js","sourceRoot":"","sources":["../../src/utils/getRandomName.ts"],"names":[],"mappings":";;AAAA;;;GAGG;AACH,MAAM,aAAa,GAAG,GAAW,EAAE;IACjC,MAAM,MAAM,GAAW,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,MAAM,EAAE,GAAG,IAAI,CAAC,CAAC;IACxD,OAAO,OAAO,MAAM,EAAE,CAAC;AACzB,CAAC,CAAC;AAEF;;GAEG;AACH,kBAAe,aAAa,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"launchBrowser.js","sourceRoot":"","sources":["../../src/browser/launchBrowser.ts"],"names":[],"mappings":";;;;;;;;;;;;;;AAAA;;GAEG;AACH,0DAA+C;AAE/C;;GAEG;AACH,gFAAwD;AAExD;;;GAGG;AACH,MAAM,aAAa,GAAG,GAA2B,EAAE;IACjD,MAAM,OAAO,GAAY,MAAM,mBAAS,CAAC,MAAM,CAAC,0BAAgB,EAAE,CAAC,CAAC;IACpE,OAAO,OAAO,CAAC;AACjB,CAAC,CAAA,CAAC;AAEF;;GAEG;AACH,kBAAe,aAAa,CAAC"}

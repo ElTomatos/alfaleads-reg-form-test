@@ -2,7 +2,7 @@
  * Vendors
  */
 import 'module-alias/register';
-import { Page } from 'puppeteer';
+import { Page, Browser } from 'puppeteer';
 
 /**
  * Browser
@@ -10,6 +10,7 @@ import { Page } from 'puppeteer';
 import launchBrowser from '@/browser/launchBrowser';
 import openPage from '@/browser/openPage';
 export let page: Page;
+export let browser: Browser;
 
 /**
  * Utils
@@ -24,16 +25,22 @@ import fillForm from '@/form/fillForm';
 /**
  * Run the test
  */
-const run = async (): Promise<void> => {
-  const browser = await launchBrowser();
+jest.setTimeout(60000);
+
+beforeAll(async () => {
+  browser = await launchBrowser();
   page = await openPage(browser);
   await mockRecapthca();
+});
 
-  console.log('filling form');
-  await fillForm();
-  console.log('form filled');
-  // await browser.close();
-  console.log('closed');
-};
+describe('Registration form', () => {
+  test('lead can submit a registration request', async () => {
+    console.log('filling form');
+    await fillForm();
+    console.log('form filled');
+  });
+});
 
-run();
+afterAll(() => {
+  browser.close();
+});
