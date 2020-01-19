@@ -1,22 +1,12 @@
 /**
- * Vendor
- */
-import async from 'async';
-
-/**
  * Config
  */
-import { FORM_FIELDS } from '@/config';
+import { FORM_FIELDS } from '@/config/config';
 
 /**
  * Utils
  */
-import fillStep from '@/utils/fillStep';
-
-/**
- * Page
- */
-import { page } from '@/index';
+import fillStep from '@/form/fillStep';
 
 /**
  * Fill form with values from config

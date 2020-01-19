@@ -22,6 +22,15 @@ export const DIMENSIONS: { width: number; height: number } = {
 };
 
 /**
+ * Input types constants
+ */
+export enum INPUT_TYPE {
+  SELECT = 'select',
+  SELECTIZED = 'selectized',
+  CHECKBOX = 'checkbox',
+}
+
+/**
  * Registration form fields
  */
 const name: string = getRandomName();
@@ -64,7 +73,7 @@ export const FORM_FIELDS: IFormInput[][] = [
     {
       selector: '[data-select2-id="1"]',
       value: '.select2-results__option:first-child',
-      type: 'select',
+      type: INPUT_TYPE.SELECT,
     },
     {
       selector: '#username',
@@ -84,38 +93,36 @@ export const FORM_FIELDS: IFormInput[][] = [
     {
       selector: '#networks-selectized',
       value: 'test',
-      type: 'selectized',
+      type: INPUT_TYPE.SELECTIZED,
       wrapper: '.networks--wrapper',
     },
     {
       selector: '#traffic-selectized',
       value: 'test',
-      type: 'selectized',
+      type: INPUT_TYPE.SELECTIZED,
       wrapper: '.traffic--wrapper',
     },
     {
       selector: '[data-select2-id="7"]',
       value:
         '#select2-select-verticies-results .select2-results__option:first-child',
-      type: 'select',
+      type: INPUT_TYPE.SELECT,
     },
     {
       selector: '[data-select2-id="8"]',
       value:
         '#select2-select-country-results .select2-results__option:first-child',
-      type: 'select',
+      type: INPUT_TYPE.SELECT,
     },
     {
       selector: '[data-select2-id="9"]',
       value:
         '#select2-monthly-revenue-results .select2-results__option:first-child',
-      type: 'select',
+      type: INPUT_TYPE.SELECT,
     },
     {
       selector: '#agree',
-      type: 'checkbox',
+      type: INPUT_TYPE.CHECKBOX,
     },
   ],
 ];
-
-export const NEXT_BTN_SELECTOR: string = '.next__btn';

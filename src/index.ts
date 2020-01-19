@@ -7,9 +7,9 @@ import { Page } from 'puppeteer';
 /**
  * Utils
  */
-import launchBrowser from '@/utils/launchBrowser';
-import openPage from '@/utils/openPage';
-import fillForm from '@/utils/fillForm';
+import launchBrowser from '@/browser/launchBrowser';
+import openPage from '@/browser/openPage';
+import fillForm from '@/form/fillForm';
 
 declare var window: {
   grecaptcha: {

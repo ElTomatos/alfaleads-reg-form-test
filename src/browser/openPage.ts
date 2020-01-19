@@ -6,7 +6,7 @@ import { Browser, Page } from 'puppeteer';
 /**
  * Config
  */
-import { TEST_URL, DIMENSIONS } from '@/config';
+import { TEST_URL, DIMENSIONS } from '@/config/config';
 const { width, height } = DIMENSIONS;
 
 /**

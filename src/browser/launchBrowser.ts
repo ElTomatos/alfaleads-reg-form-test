@@ -6,7 +6,7 @@ import puppeteer, { Browser } from 'puppeteer';
 /**
  * Config
  */
-import { DIMENSIONS } from '@/config';
+import { DIMENSIONS } from '@/config/config';
 
 /**
  * Launches the browser

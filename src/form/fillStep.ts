@@ -6,12 +6,12 @@ import { page } from '@/index';
 /**
  * Config
  */
-import { FORM_FIELDS, NEXT_BTN_SELECTOR } from '@/config';
+import { FORM_FIELDS } from '@/config/config';
 
 /**
  * Utils
  */
-import fillInput from '@/utils/fillInput';
+import fillInput from '@/form/fillInput';
 import sleep from '@/utils/sleep';
 
 /**
