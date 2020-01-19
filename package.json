@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "chalk": "^3.0.0",
     "jest": "^24.9.0",
     "module-alias": "^2.2.2",
     "puppeteer": "^2.0.0"
@@ -21,7 +22,7 @@
   },
   "scripts": {
     "test": "jest",
-    "debug": "NODE_ENV=debug  jest",
+    "test:debug": "NODE_ENV=debug  jest",
     "build": "tsc"
   },
   "keywords": [],

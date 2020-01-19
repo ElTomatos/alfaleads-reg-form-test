@@ -15,6 +15,7 @@ import fillCheckbox from '@/form/fillCheckbox';
  * Config
  */
 import { INPUT_TYPE } from '@/config/config';
+import log from '@/utils/log';
 
 /**
  * Filling input field
@@ -46,8 +47,8 @@ const fillInput = async ({
         break;
     }
   } catch (e) {
-    console.log(e);
-    console.log(`error on filling ${selector}`);
+    log('red', e);
+    log('red', `error on filling ${selector}`);
     throw new Error(`error on filling ${selector}`);
   }
 };

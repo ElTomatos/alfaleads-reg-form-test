@@ -2,6 +2,7 @@
  * Page
  */
 import { page } from '@/index.spec';
+import log from '@/utils/log';
 
 /**
  * Checking checkbox type input
@@ -9,7 +10,7 @@ import { page } from '@/index.spec';
  */
 const fillCheckbox = async (selector: string) => {
   await page.click(selector);
-  console.log(`checked ${selector}`);
+  log('green', `checked ${selector}`);
 };
 
 /**

@@ -1,4 +1,5 @@
 import { page } from '@/index.spec';
+import log from '@/utils/log';
 
 /**
  * Fill selectized input
@@ -12,15 +13,15 @@ const fillSelectized = async (
   wrapper: string
 ) => {
   await page.click(selector);
-  console.log(`click ${selector}`);
+  log('blue', `click ${selector}`);
   await page.type(selector, value);
-  console.log(`type ${value}`);
+  log('blue', `type ${value}`);
   await page.waitForSelector(`${wrapper} .selectize-dropdown`, {
     visible: true,
   });
-  console.log(`wait for selectize-dropdown`);
+  log('blue', `wait for selectize-dropdown`);
   await page.click(`${wrapper} .selectize-dropdown`);
-  console.log(`selectized`);
+  log('green', `selectized`);
 };
 
 /**

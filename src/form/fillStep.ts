@@ -13,23 +13,24 @@ import { FORM_FIELDS } from '@/config/config';
  */
 import fillInput from '@/form/fillInput';
 import sleep from '@/utils/sleep';
+import log from '@/utils/log';
 
 /**
  *
  * @param {number} step
  */
 const fillStep = async (step: number): Promise<void> => {
-  console.log('sleeping');
+  log('blue', 'sleeping...');
   await sleep(2000);
-  console.log(`waiting for step ${step}`);
+  log('blue', `waiting for step ${step}`);
   await page.waitForSelector(`.step${step}`, { visible: true });
 
   for await (const field of FORM_FIELDS[step - 1]) {
-    console.log('filling inputs');
+    log('blue', 'filling inputs');
     await fillInput(field);
   }
 
-  console.log('go next');
+  log('green', 'go next step');
   await page.click(`.next${step}__btn`);
 };
 

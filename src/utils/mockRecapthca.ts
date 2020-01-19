@@ -15,8 +15,8 @@ declare var window: {
 /**
  * Mocking recapthca response to always have true
  */
-const mockRecapthca = async () => {
+const mockRecaptcha = async () => {
   await page.evaluate(() => (window.grecaptcha.getResponse = () => true));
 };
 
-export default mockRecapthca;
+export default mockRecaptcha;

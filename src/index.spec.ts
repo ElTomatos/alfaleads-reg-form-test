@@ -15,7 +15,8 @@ export let browser: Browser;
 /**
  * Utils
  */
-import mockRecapthca from '@/utils/mockRecapthca';
+import mockRecaptcha from '@/utils/mockRecapthca';
+import log from '@/utils/log';
 
 /**
  * Form
@@ -23,24 +24,33 @@ import mockRecapthca from '@/utils/mockRecapthca';
 import fillForm from '@/form/fillForm';
 
 /**
- * Run the test
+ * 1 minute for filling the form
  */
 jest.setTimeout(60000);
 
+/**
+ * Open browser for the test
+ */
 beforeAll(async () => {
   browser = await launchBrowser();
   page = await openPage(browser);
-  await mockRecapthca();
+  await mockRecaptcha();
 });
 
+/**
+ * Run the test
+ */
 describe('Registration form', () => {
   test('lead can submit a registration request', async () => {
-    console.log('filling form');
+    log('blue', 'filling form');
     await fillForm();
-    console.log('form filled');
+    log('green', 'form filled');
   });
 });
 
+/**
+ * Close browser after the test
+ */
 afterAll(() => {
   browser.close();
 });

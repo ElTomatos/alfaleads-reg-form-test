@@ -2,6 +2,7 @@
  * Page
  */
 import { page } from '@/index.spec';
+import log from '@/utils/log';
 
 /**
  *
@@ -9,12 +10,12 @@ import { page } from '@/index.spec';
  * @param {string} value
  */
 const fillTextInput = async (selector: string, value: string) => {
-  console.log(`waiting for ${selector}`);
+  log('blue', `waiting for ${selector}`);
   await page.waitForSelector(selector, { visible: true });
   await page.click(selector);
-  console.log(`click ${selector}`);
+  log('blue', `click ${selector}`);
   await page.type(selector, value);
-  console.log(`type ${value}`);
+  log('green', `typed ${value}`);
 };
 
 /**

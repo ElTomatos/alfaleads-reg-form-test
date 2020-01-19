@@ -1,12 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 /**
  * Suspend execution
  * @param {number} ms
  */
-const sleep = (ms) => new Promise(resolve => {
+const sleep = ms =>
+  new Promise(resolve => {
     setTimeout(resolve, ms);
-});
+  });
 /**
  * Expo
  */
