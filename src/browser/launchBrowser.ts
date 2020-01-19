@@ -6,19 +6,14 @@ import puppeteer, { Browser } from 'puppeteer';
 /**
  * Config
  */
-import { DIMENSIONS } from '@/config/config';
+import getBrowserConfig from '@/utils/getBrowserConfig';
 
 /**
  * Launches the browser
  * @return {Browser}
  */
 const launchBrowser = async (): Promise<Browser> => {
-  const browser: Browser = await puppeteer.launch({
-    slowMo: 40,
-    headless: false,
-    args: [`--window-size=${DIMENSIONS.width},${DIMENSIONS.height}`],
-  });
-
+  const browser: Browser = await puppeteer.launch(getBrowserConfig());
   return browser;
 };
 

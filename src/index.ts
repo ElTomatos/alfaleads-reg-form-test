@@ -5,19 +5,21 @@ import 'module-alias/register';
 import { Page } from 'puppeteer';
 
 /**
- * Utils
+ * Browser
  */
 import launchBrowser from '@/browser/launchBrowser';
 import openPage from '@/browser/openPage';
-import fillForm from '@/form/fillForm';
-
-declare var window: {
-  grecaptcha: {
-    getResponse: () => true;
-  };
-};
-
 export let page: Page;
+
+/**
+ * Utils
+ */
+import mockRecapthca from '@/utils/mockRecapthca';
+
+/**
+ * Form
+ */
+import fillForm from '@/form/fillForm';
 
 /**
  * Run the test
@@ -25,8 +27,7 @@ export let page: Page;
 const run = async (): Promise<void> => {
   const browser = await launchBrowser();
   page = await openPage(browser);
-
-  await page.evaluate(() => (window.grecaptcha.getResponse = () => true));
+  await mockRecapthca();
 
   console.log('filling form');
   await fillForm();

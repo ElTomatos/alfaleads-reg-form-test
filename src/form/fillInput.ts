@@ -18,9 +18,11 @@ import { INPUT_TYPE } from '@/config/config';
 
 /**
  * Filling input field
- * @param selector
- * @param value
- * @return Promise
+ * @param {string} selector
+ * @param {string} value
+ * @param {string} type
+ * @param {string} wrapper
+ * @return {Promise}
  */
 const fillInput = async ({
   selector,
