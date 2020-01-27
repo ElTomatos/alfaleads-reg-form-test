@@ -17,6 +17,7 @@ export let browser: Browser;
  */
 import mockRecaptcha from '@/utils/mockRecapthca';
 import log from '@/utils/log';
+import waitForResponse from "@/utils/waitForResponse";
 
 /**
  * Form
@@ -45,6 +46,8 @@ describe('Registration form', () => {
     log('blue', 'filling form');
     await fillForm();
     log('green', 'form filled');
+    const res = await waitForResponse(page,"/register");
+    console.log(res);
   });
 });
 
